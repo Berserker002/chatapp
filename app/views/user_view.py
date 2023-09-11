@@ -32,7 +32,7 @@ class UserLoginView(ObtainAuthToken):
 class OnlineUserListView(generics.ListAPIView):
     queryset = User.objects.filter(is_online=True)
     serializer_class = UserSerializer
-
+    permission_classes = (permissions.AllowAny,)
 
 class RecommendedListView(generics.ListAPIView):
     serializer_class = UserSerializer
