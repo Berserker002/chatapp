@@ -60,6 +60,8 @@ The `shell` command is useful for development. It drops you into an python shell
 
 - api/login - when a user log in online is set to true and it will remain for 1 hour after than user should log in again return a token use it in header as Authorization: Token <str:token>.
 
+I have made all the users that was in the json list and made password as password only.
+
 - payload = {
   "name": "tester 1",
   "password": "password"
