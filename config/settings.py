@@ -13,7 +13,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '4c1c-103-143-39-118.ngrok-free.app',
-    '.vercel.app'
+    '.vercel.app',
+    '.now.sh'
 ]
 
 PROJECT_NAME = 'chatapp'
@@ -71,10 +72,10 @@ WSGI_APPLICATION = "config.wsgi.application"
 BASE_DIR_DB = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR_DB, 'mydatabase.sqlite3'),
-    }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR_DB, 'mydatabase.sqlite3'),
+    # }
 }
 
 
