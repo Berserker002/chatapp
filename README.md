@@ -42,8 +42,6 @@ The `shell` command is useful for development. It drops you into an python shell
 > python manage.py shell
 ```
 
-Maps shell has autoreload enabled, to disable it run
-
 #### APIS
 
 # Authentication Endpoints
@@ -60,7 +58,7 @@ Maps shell has autoreload enabled, to disable it run
   }
   }
 
-- api/login - when a user log in online is set to true and it will remain for 1 hour after than user should log in again.
+- api/login - when a user log in online is set to true and it will remain for 1 hour after than user should log in again return a token use it in header as Authorization: Token <str:token>.
 
 payload = {
 "name": "tester 1",
@@ -70,8 +68,8 @@ payload = {
 ## Chat Management Endpoints
 
 - api/online-users - Get all the online users (Open to all).
-- api/start-chat - Start a chat with a user, users should be online and should be a part of chat.
 - api/suggested-friends/<str:user_id> - Give you a list of top 5 suggested users.
+- api/start-chat - Start a chat with a user, users should be online and should be a part of chat return a room_name use it in websocket.
 
 # WebSocket Chat Endpoint
 
