@@ -11,7 +11,9 @@ SECRET_KEY = "django-insecure-$cxbcol-eqyy_$ltpx#cmr1z+xmcaq+mi(2x)61*s-ylgkohrh
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '4c1c-103-143-39-118.ngrok-free.app'
+]
 
 PROJECT_NAME = 'chatapp'
 
