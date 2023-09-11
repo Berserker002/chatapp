@@ -47,7 +47,7 @@ The `shell` command is useful for development. It drops you into an python shell
 # Authentication Endpoints
 
 - api/register - register a user.
-  payload = {
+- payload = {
   "name": "tester 1",
   "age": 22,
   "password": "password",
@@ -60,16 +60,16 @@ The `shell` command is useful for development. It drops you into an python shell
 
 - api/login - when a user log in online is set to true and it will remain for 1 hour after than user should log in again return a token use it in header as Authorization: Token <str:token>.
 
-payload = {
-"name": "tester 1",
-"password": "password"
-}
+- payload = {
+  "name": "tester 1",
+  "password": "password"
+  }
 
 ## Chat Management Endpoints
 
 - api/online-users - Get all the online users (Open to all).
-- api/suggested-friends/<str:user_id> - Give you a list of top 5 suggested users.
-- api/start-chat - Start a chat with a user, users should be online and should be a part of chat return a room_name use it in websocket.
+- api/suggested-friends/<str:user_id> - Give you a list of top 5 suggested users(Open to all).
+- api/start-chat - Start a chat with a user, auhtorization should be provided as it will identify which user is requesting and should prode a name as which user you want to add, users should be online and should be a part of chat return a room_name use it in websocket.
 
 # WebSocket Chat Endpoint
 
