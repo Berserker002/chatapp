@@ -13,9 +13,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '4c1c-103-143-39-118.ngrok-free.app',
-    '.vercel.app',
-    '.now.sh'
-]
+    '127.0.0.1',
+    'localhost']
 
 PROJECT_NAME = 'chatapp'
 
