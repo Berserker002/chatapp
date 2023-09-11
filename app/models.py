@@ -32,7 +32,7 @@ class User(AbstractBaseUser, PermissionsMixin):
         return self.name
 
 class Chat(models.Model):
-    name = models.CharField(max_length=255, default='chat room')
+    name = models.CharField(max_length=255, default='chat room', unique=True)
     participants = models.ManyToManyField(User, related_name='chats')
     created_at = models.DateTimeField(auto_now_add=True)
 

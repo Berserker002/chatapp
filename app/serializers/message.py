@@ -21,6 +21,14 @@ class StartChatSerializer(serializers.Serializer):
         name = validated_data['name']
         recipient_user = User.objects.get(name=name)
         chat_name = f"{current_user.name.replace(' ', '')}_{recipient_user.name.replace(' ', '')}"
+        try:
+            chat = Chat.objects.get(name=chat_name)
+        except Chat.DoesNotExist:
+            chat = None
+
+        if chat:
+            raise serializers.ValidationError("Chat already exists")
+
         chat = Chat.objects.create(name=chat_name)
         chat.participants.add(current_user, recipient_user)
 
